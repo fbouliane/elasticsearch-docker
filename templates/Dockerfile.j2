@@ -34,7 +34,7 @@ WORKDIR /usr/share/elasticsearch
 USER elasticsearch
 
 # Download and extract defined ES version.
-RUN curl -fsSL {{ url_root }}/{{ tarball }} | \
+RUN curl -fsSL "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.0.tar.gz" | \
     tar zx --strip-components=1
 
 RUN set -ex && for esdirs in config data logs; do \
