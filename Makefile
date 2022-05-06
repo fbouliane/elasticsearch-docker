@@ -12,7 +12,7 @@ VERSION_TAG := $(ELASTIC_VERSION)
 endif
 
 ELASTIC_REGISTRY := docker.elastic.co
-VERSIONED_IMAGE := $(ELASTIC_REGISTRY)/elasticsearch/elasticsearch:$(VERSION_TAG)
+VERSIONED_IMAGE := elasticsearch:$(VERSION_TAG)
 
 # When invoking docker-compose, use an extra config fragment to map Elasticsearch's
 # listening port to the docker host.
